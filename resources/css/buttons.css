@@ -1,0 +1,49 @@
+.btn-indigo {
+  @apply px-6 py-3 rounded bg-indigo-600 text-white text-sm leading-4 font-bold whitespace-nowrap hover:bg-orange-400 focus:bg-orange-400;
+}
+
+.btn-sky {
+  @apply px-6 py-3 rounded bg-sky-600 text-white text-sm leading-4 font-bold whitespace-nowrap hover:bg-sky-700 focus:bg-sky-700;
+}
+
+.btn-sky-rounded {
+  @apply px-6 py-3 bg-sky-500 hover:bg-sky-700 text-sm leading-5 rounded-full font-semibold text-white;
+}
+
+button:disabled,
+button[disabled],
+button[disabled]:hover{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn-spinner,
+.btn-spinner:after {
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.btn-spinner {
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.2em solid white;
+  border-right: 0.2em solid white;
+  border-bottom: 0.2em solid white;
+  border-left: 0.2em solid transparent;
+  transform: translateZ(0);
+  animation: spinning 1s infinite linear;
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
